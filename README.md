@@ -32,6 +32,7 @@ Clone o repositório:
 
 ```bash
 git clone https://github.com/adrianoalbuquerque/cartilha-etnomatematica.git
+````
 
 # 🛠 Tecnologias Utilizadas
 
@@ -52,3 +53,4 @@ git clone https://github.com/adrianoalbuquerque/cartilha-etnomatematica.git
 │   └── perfil_ernani.jpg
 ├── styles.css          # Estilos complementares
 └── README.md           # Este arquivo
+````
