@@ -1,0 +1,47 @@
+.hero-bg {
+    background-color: #ea9f52;
+}
+
+.btn-primary {
+    background-color: #546f16;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3a4d0f;
+}
+
+.section-title {
+    color: #546f16;
+    border-bottom: 2px solid #ea9f52;
+}
+
+/* Transição suave para o menu mobile */
+.md\\:flex {
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.md\\:flex.flex {
+    max-height: 500px;
+    /* Ajuste conforme necessário */
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.duration-300 {
+    width: 50px;
+}
+
+/* Adicione ao seu arquivo styles.css */
+.transition-colors {
+    transition: background-color 0.3s ease;
+}
+
+#btn-acessar {
+    width: 135px;
+}

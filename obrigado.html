@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Enviada - Cartilha Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .btn-primary {
+            background-color: #546f16;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #3a4d0f;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/agricultura-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            border-bottom: 3px solid #ea9f52;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold" style="color: #546f16;">
+                    <i class="fas fa-book-open text-5xl mb-4" style="color: #546f16; font-size: 1.5rem;"></i>
+                    Cartilha Digital
+                </div>
+                <!-- <div class="hidden md:flex space-x-8">
+                    <a href="index.html#sobre" class="hover:text-orange-600">Sobre</a>
+                    <a href="index.html#autores" class="hover:text-orange-600">Autores</a>
+                    <a href="index.html#participantes" class="hover:text-orange-600">Participantes</a>
+                    <a href="index.html#contato" class="hover:text-orange-600">Contato</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </button> -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="min-h-screen flex items-center justify-center">
+        <section class="py-20 text-center">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto bg-white p-10 rounded-lg shadow-lg">
+                    <div class="text-green-600 mb-6">
+                        <i class="fas fa-check-circle text-6xl"></i>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4" style="color: #546f16;">Mensagem Enviada com Sucesso!</h1>
+                    <p class="text-lg mb-8">Obrigado por entrar em contato conosco. Responderemos sua mensagem o mais breve possível.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="index.html" class="btn-primary px-6 py-3 rounded-lg font-medium inline-block">
+                            <i class="fas fa-home mr-2"></i> Voltar à Página Inicial
+                        </a>
+                        <a href="index.html#contato" class="px-6 py-3 rounded-lg font-medium inline-block border border-green-600 text-green-600 hover:bg-green-50">
+                            <i class="fas fa-envelope mr-2"></i> Enviar outra mensagem
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-bold mb-2" style="color: #ea9f52;">Cartilha Digital</div>
+                    <p>Explorando a proporcionalidade no contexto da agricultura orgânica</p>
+                </div>
+                <!-- <div class="flex space-x-6">
+                    <a href="#" class="hover:text-orange-400"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="hover:text-orange-400"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="hover:text-orange-400"><i class="fab fa-instagram text-xl"></i></a>
+                </div> -->
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Cartilha Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 p-3 bg-green-700 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-green-800 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Botão Voltar ao Topo
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('show');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Menu Mobile (se necessário)
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+            const navMenu = document.querySelector('.hidden.md\\:flex');
+            
+            if (mobileMenuButton && navMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    navMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
